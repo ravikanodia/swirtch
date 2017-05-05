@@ -1,10 +1,20 @@
 <!DOCTYPE html>
 <html>
-  <head><title>Swirtch</title></head>
+  <head>
+    <title>Swirtch</title>
+    <link rel="stylesheet" href="swirtch.css">
+  </head>
   <body>
     <script src="./swirtch.js"></script>
+    <script src="./lib/SearchBox.js"></script>
     <script src="./lib/Streams.js"></script>
     <script src="./lib/twitch.js"></script>
+    <script language="javascript">
+      window.onload = function() {
+        window.Swirtch.SearchBox().render();
+        window.Swirtch.Streams().render();
+      };
+    </script>
     <div id="searcharea">Search area goes here</div>
     <div id="searchresults">Results area goes here</div>
   </body>

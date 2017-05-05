@@ -1,0 +1,32 @@
+
+
+.stream-container {
+  display: flex;
+  height: 200px
+}
+
+.stream-image {
+  width: 300px;
+  min-width: 300px;
+  height: auto;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.stream-description {
+  flex-grow: 1;
+  padding: 10px;
+}
+
+.stream-display-name {
+  font-size: 140%;
+  padding-bottom: 8px;
+}
+
+.stream-game-name {
+  display: inline-block;
+}
+
+.stream-viewer-count {
+  display: inline-block;
+}

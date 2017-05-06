@@ -1,32 +1,137 @@
+html {
+  overflow-y: scroll;
+}
 
+body {
+  background-color: #7aa7c2;
+}
+
+.search-container {
+  margin: 50px auto 20px auto;
+  display: table;
+}
+
+.search-button, .search-input {
+  height: 40px;
+  border: none;
+  padding: 0 20px;
+  position: relative;
+}
+
+.search-input {
+  z-index: 1;
+  outline: none;
+}
+
+.search-button {
+  z-index: 0;
+}
+
+.search-input:focus {
+  box-shadow: inset 0 0 0 1px #73c6eb, 0 0 6px 4px #5c8bf8;
+}
+
+.results-header {
+  height: 70px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.results-total, .results-pager {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.results-total {
+  float: left;
+  color: #ddd;
+}
+
+.results-pager {
+  float: right;
+}
+
+.results-paging-link {
+  color: #ddd;
+  display: inline-block;
+  text-decoration: none;
+  padding: 8px;
+}
+
+.results-page-count {
+  color: #ddd;
+  display: inline-block;
+  padding: 8px;
+}
+
+.results-streams {
+  width: 80%;
+  margin: 0 auto;
+  box-shadow: 1px 1px 5px #222;
+}
 
 .stream-container {
+  background-color: #fbfbf4;
   display: flex;
-  height: 200px
+  height: 200px;
+}
+
+.streams-empty-message-container {
+  background-color: #fbfbf4;
+  height: 400px;
+}
+
+.streams-empty-message {
+  font-size: 200%;
+  text-align: center;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.stream-container+.stream-container {
+  border-top: 1px solid rgba(0, 0, 0, .1);
 }
 
 .stream-image {
   width: 300px;
   min-width: 300px;
   height: auto;
+  margin: 10px;
   background-size: contain;
   background-repeat: no-repeat;
+  background-position: center;
 }
 
 .stream-description {
   flex-grow: 1;
-  padding: 10px;
+  margin: auto 10px;
 }
 
 .stream-display-name {
   font-size: 140%;
   padding-bottom: 8px;
+  display: inline-block;
+  color: #000;
+  text-decoration: none;
+}
+
+.stream-display-name:hover, .stream-display-name:focus {
+  text-decoration: underline;
 }
 
 .stream-game-name {
   display: inline-block;
+  text-decoration: none;
+  color: #000;
+}
+
+.stream-game-name:hover, .stream-game-name:focus {
+  text-decoration: underline;
 }
 
 .stream-viewer-count {
   display: inline-block;
 }
+

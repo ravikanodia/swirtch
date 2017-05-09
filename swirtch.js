@@ -16,7 +16,12 @@ if (typeof window.Swirtch === 'undefined') {
       }
 
       for (var opt in options) {
-        if (options.hasOwnProperty(opt)) {
+        // Make styles easier to declare in template.
+        if (opt === 'style') {
+          for (var styleName in options[opt]) {
+            element.style[styleName] = options[opt][styleName];
+          }
+        } else if (options.hasOwnProperty(opt)) {
           element[opt] = options[opt];
         }
       }

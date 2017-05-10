@@ -1,7 +1,13 @@
 if (typeof window.Swirtch === 'undefined') {
   window.Swirtch = {};
 
-  // It's not super powerful but at least let's make DOM element creation a
+  window.Swirtch.initialize = function() {
+    var searcharea = document.getElementById('searcharea');
+    searcharea.innerHTML = "";
+    searcharea.appendChild(window.Swirtch.SearchBox().render());
+  }
+
+  // It's not super powerful but at least let us make DOM element creation a
   // little less painful.
   window.Swirtch.createElement = function(spec) {
     var nodeType = spec[0];

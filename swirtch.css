@@ -105,7 +105,7 @@ body {
   border-top: 1px solid rgba(0, 0, 0, .1);
 }
 
-.stream-image {
+.stream-image, .twitch-embed {
   width: 300px;
   min-width: 300px;
   height: auto;
@@ -113,6 +113,11 @@ body {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+  border: 0;
+}
+
+.twitch-embed {
+  background-color: #000;
 }
 
 .stream-description {
